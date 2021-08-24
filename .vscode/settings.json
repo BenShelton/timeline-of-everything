@@ -1,4 +1,9 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "vetur.experimental.templateInterpolationService": true
+  "vetur.experimental.templateInterpolationService": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ]
 }
