@@ -1,31 +1,32 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <h1>Timeline of Everything</h1>
+  <Timeline
+    title="Main"
+    :items="items"
+  />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Timeline from './components/Timeline.vue'
+
+import { items } from './data/timeline'
 
 export default defineComponent({
   name: 'App',
 
   components: {
-    HelloWorld
+    Timeline
+  },
+
+  setup () {
+    return {
+      items
+    }
   }
 })
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+@import "vis-timeline/styles/vis-timeline-graph2d.css"
 </style>
