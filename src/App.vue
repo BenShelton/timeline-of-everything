@@ -3,6 +3,8 @@
   <Timeline
     title="Main"
     :items="items"
+    :start="start"
+    :end="end"
   />
 </template>
 
@@ -11,6 +13,7 @@ import { defineComponent } from 'vue'
 import Timeline from './components/Timeline.vue'
 
 import { items } from './data/timeline'
+import { getDate } from './utils'
 
 export default defineComponent({
   name: 'App',
@@ -20,7 +23,12 @@ export default defineComponent({
   },
 
   setup () {
+    const start = getDate(-6000)
+    const end = new Date()
+
     return {
+      start,
+      end,
       items
     }
   }

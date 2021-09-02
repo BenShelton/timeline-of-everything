@@ -19,7 +19,9 @@ export default defineComponent({
 
   props: {
     title: { type: String, required: true },
-    items: { type: Object as PropType<DataItem[]>, required: true }
+    items: { type: Object as PropType<DataItem[]>, required: true },
+    start: { type: Date, default: null },
+    end: { type: Date, default: null }
   },
 
   setup (props) {
@@ -32,8 +34,8 @@ export default defineComponent({
       if (!timeline.value) throw new Error('Timeline element not created')
       if (timelineInstance) timelineInstance.destroy()
       timelineInstance = new Timeline(timeline.value, props.items, {
-        start: new Date(-6000, 0, 1),
-        end: new Date()
+        start: props.start ?? undefined,
+        end: props.end ?? undefined
       })
       timelineInstance.on('select', (selection) => {
         nestedTimeline.value = null
