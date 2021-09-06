@@ -4,16 +4,15 @@ import { charactersGroup, foreignKingsGroup } from './groups'
 
 export const items: DataItem[] = [
   {
-    start: getDate(-633),
-    end: getDate(-536),
+    start: getDate(-633), // circa
+    end: getDate(-536), // circa
     title: 'Daniel',
     content: 'Daniel',
     id: 'daniel',
     group: charactersGroup
   },
-  // TODO: Fade Start Date
   {
-    start: getDate(33, 6),
+    start: getDate(33, 6), // first mention
     end: getDate(34, 12),
     title: 'Stephen',
     content: 'Stephen',
@@ -21,12 +20,29 @@ export const items: DataItem[] = [
     group: charactersGroup
   },
   {
-    start: getDate(1),
+    start: getDate(1), // circa
     // TODO: Death
     // end: getDate(99),
     title: 'Paul',
     content: 'Paul',
     id: 'paul',
+    group: charactersGroup
+  },
+  {
+    start: getDate(-1210), // circa
+    end: getDate(-1130), // circa
+    title: 'Hannah',
+    content: 'Hannah',
+    id: 'hannah',
+    group: charactersGroup
+  },
+  {
+    // TODO: Confirm death
+    start: getDate(-1179),
+    end: getDate(-1078),
+    title: 'Samuel',
+    content: 'Samuel',
+    id: 'samuel',
     group: charactersGroup
   },
   {

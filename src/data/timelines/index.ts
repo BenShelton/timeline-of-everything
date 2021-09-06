@@ -1,3 +1,5 @@
 export { items as daniel } from './daniel'
+export { items as hannah } from './hannah'
 export { items as paul } from './paul'
+export { items as samuel } from './samuel'
 export { items as stephen } from './stephen'
