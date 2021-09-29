@@ -1,25 +1,30 @@
 <template>
   <h2 v-text="title" />
+  <h4
+    v-if="subtitle"
+    v-text="subtitle"
+  />
   <div ref="timeline" />
   <Timeline
     v-if="nestedTimeline"
     :title="nestedTimeline.title"
+    :subtitle="nestedTimeline.subtitle"
     :items="nestedTimeline.items"
   />
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, PropType, ref, watch } from 'vue'
-import { DataItem, Timeline } from 'vis-timeline/esnext'
-
-import * as timelines from '../data/timelines'
+import { DataItem, Timeline, TimelineOptions } from 'vis-timeline/esnext'
+import { NestedTimelineItem } from '../data/types'
 
 export default defineComponent({
   name: 'Timeline',
 
   props: {
     title: { type: String, required: true },
-    items: { type: Object as PropType<DataItem[]>, required: true },
+    subtitle: { type: String, default: '' },
+    items: { type: Array as PropType<NestedTimelineItem[]>, required: true },
     start: { type: Date, default: null },
     end: { type: Date, default: null }
   },
@@ -27,26 +32,23 @@ export default defineComponent({
   setup (props) {
     const timeline = ref<HTMLDivElement | null>(null)
     let timelineInstance: Timeline | null = null
-    const nestedTimeline = ref<{ items: DataItem[], title: string } | null>(null)
+    const nestedTimeline = ref<{ items: DataItem[], title: string, subtitle?: string } | null>(null)
 
     function createTimeline (): void {
       if (!props.items) return
       if (!timeline.value) throw new Error('Timeline element not created')
       if (timelineInstance) timelineInstance.destroy()
-      timelineInstance = new Timeline(timeline.value, props.items, {
-        start: props.start ?? undefined,
-        end: props.end ?? undefined
-      })
+      const options: TimelineOptions = {}
+      if (props.start) options.start = props.start
+      if (props.end) options.end = props.end
+      timelineInstance = new Timeline(timeline.value, props.items, options)
       timelineInstance.on('select', (selection) => {
         nestedTimeline.value = null
-        const itemName = selection.items?.[0]
+        const itemName: string = selection.items?.[0]
         if (itemName) {
-          const item = props.items?.find(i => i.id === itemName)
-          if (item) {
-            const tl = timelines[item.id as keyof typeof timelines]
-            if (tl) {
-              nestedTimeline.value = { items: tl, title: item.content }
-            }
+          const item = props.items.find(i => i.id === itemName)
+          if (item?.timeline) {
+            nestedTimeline.value = { items: item.timeline, title: item.content, subtitle: item.notes }
           }
         }
       })
@@ -67,3 +69,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+:deep(.vis-content)
+  .circa-start
+    border-left-style: dashed
+  .circa-end
+    border-right-style: dashed
+  .incomplete:not(.vis-selected)
+    background-color: rgba(red, 0.3)
+    border-color: rgba(red, 0.7)
+</style>
