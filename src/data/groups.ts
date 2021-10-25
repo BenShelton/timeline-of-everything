@@ -9,3 +9,8 @@ export const foreignKingsGroup: DataGroup = {
   id: 'foreignKings',
   content: 'Foreign Kings'
 }
+
+export const significantEventsGroup: DataGroup = {
+  id: 'significantEvents',
+  content: 'Significant Events'
+}
