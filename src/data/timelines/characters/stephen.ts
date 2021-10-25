@@ -1,6 +1,6 @@
-import { getDate, link } from '../../utils'
-import { charactersGroup } from '../groups'
-import { NestedTimelineItem } from '../types'
+import { getDate, link } from '@/utils'
+import { charactersGroup } from '@/data/groups'
+import { NestedTimelineItem } from '@/data/types'
 
 export const stephen: NestedTimelineItem = {
   className: 'circa-start',
