@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview",
     "tsc": "vue-tsc --noEmit",
-    "lint": "eslint --ext .js,.ts,.vue"
+    "lint": "eslint --ext .js,.ts,.vue",
+    "test": "yarn lint && yarn tsc"
   },
   "keywords": [],
   "author": "",

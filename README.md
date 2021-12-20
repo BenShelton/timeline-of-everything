@@ -6,4 +6,4 @@ _A comprehensive timeline of Biblical events, characters, prophecies (& their fu
 
 ## Viewing
 
-The complete timeline can be viewed at [TBD](#)
+The complete timeline can be viewed on [Netlify](https://timeline-of-everything.netlify.app/).
