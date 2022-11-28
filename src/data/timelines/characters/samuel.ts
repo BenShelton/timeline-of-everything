@@ -17,11 +17,11 @@ export const samuel: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(birthDate + 3),
-      content: 'Given to Jehovah<br><b>1 Samuel 1:24-28</b>'
+      content: 'Given to Jehovah<br><b>1 Samuel 1:24-28</b>',
     },
     {
       start: getDate(birthDate + 12),
-      content: 'Starts ministering<br><b>1 Samuel 2:18</b>'
-    }
-  ]
+      content: 'Starts ministering<br><b>1 Samuel 2:18</b>',
+    },
+  ],
 }

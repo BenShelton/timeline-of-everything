@@ -15,19 +15,19 @@ export const lamech: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-3152),
-      content: 'Born<br><b>Genesis 5:25</b>'
+      content: 'Born<br><b>Genesis 5:25</b>',
     },
     {
       start: getDate(-2970),
-      content: 'Noah is born at 182<br><b>Genesis 5:28</b>'
+      content: 'Noah is born at 182<br><b>Genesis 5:28</b>',
     },
     {
       start: getDate(-2490),
-      content: 'God gives pronouncement of flood in 120 years<br><b>Genesis 6:3</b>'
+      content: 'God gives pronouncement of flood in 120 years<br><b>Genesis 6:3</b>',
     },
     {
       start: getDate(-2375),
-      content: 'Died at 777<br><b>Genesis 5:31</b>'
-    }
-  ]
+      content: 'Died at 777<br><b>Genesis 5:31</b>',
+    },
+  ],
 }

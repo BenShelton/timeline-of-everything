@@ -8,5 +8,5 @@ export const exodus: NestedTimelineItem = {
   title: 'Exodus from Egypt',
   content: 'Exodus from Egypt',
   type: 'box',
-  group: significantEventsGroup
+  group: significantEventsGroup,
 }

@@ -9,10 +9,10 @@ function resolve (...dirs: string[]): string {
 export default defineConfig({
   resolve: {
     alias: {
-      '@': resolve('src')
-    }
+      '@': resolve('src'),
+    },
   },
   plugins: [
-    vue()
-  ]
+    vue(),
+  ],
 })

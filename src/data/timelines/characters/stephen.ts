@@ -15,7 +15,7 @@ export const stephen: NestedTimelineItem = {
     {
       start: getDate(33, 6),
       content: 'Assigned to distribute food<br>' +
-        '<b>Acts 6:1-7</b>'
+        '<b>Acts 6:1-7</b>',
     },
     {
       start: getDate(34, 12),
@@ -23,7 +23,7 @@ export const stephen: NestedTimelineItem = {
         'Received a vision of Jehovah & Jesus<br>' +
         'Stoned to death<br>' +
         '<b>Acts 6:8-7:60</b><br>' +
-        link('https://wol.jw.org/en/wol/d/r1/lp-e/1102009041#h=42')
-    }
-  ]
+        link('https://wol.jw.org/en/wol/d/r1/lp-e/1102009041#h=42'),
+    },
+  ],
 }

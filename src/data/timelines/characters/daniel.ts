@@ -15,7 +15,7 @@ export const daniel: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-617),
-      content: 'Taken into captivity<br><b>Daniel 1:1</b>'
-    }
-  ]
+      content: 'Taken into captivity<br><b>Daniel 1:1</b>',
+    },
+  ],
 }

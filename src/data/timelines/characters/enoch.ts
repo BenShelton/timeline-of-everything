@@ -15,15 +15,15 @@ export const enoch: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-3404),
-      content: 'Born<br><b>Genesis 5:18</b>'
+      content: 'Born<br><b>Genesis 5:18</b>',
     },
     {
       start: getDate(-3339),
-      content: 'Methusaleh is born at 65<br><b>Genesis 5:21</b>'
+      content: 'Methusaleh is born at 65<br><b>Genesis 5:21</b>',
     },
     {
       start: getDate(-3039),
-      content: '"Transferred" at 365<br><b>Genesis 5:24</b>'
-    }
-  ]
+      content: '"Transferred" at 365<br><b>Genesis 5:24</b>',
+    },
+  ],
 }

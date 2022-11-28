@@ -15,15 +15,15 @@ export const kenan: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-3701),
-      content: 'Born<br><b>Genesis 5:9</b>'
+      content: 'Born<br><b>Genesis 5:9</b>',
     },
     {
       start: getDate(-3631),
-      content: 'Mahalalel is born at 70<br><b>Genesis 5:12</b>'
+      content: 'Mahalalel is born at 70<br><b>Genesis 5:12</b>',
     },
     {
       start: getDate(-2791),
-      content: 'Died at 910<br><b>Genesis 5:14</b>'
-    }
-  ]
+      content: 'Died at 910<br><b>Genesis 5:14</b>',
+    },
+  ],
 }

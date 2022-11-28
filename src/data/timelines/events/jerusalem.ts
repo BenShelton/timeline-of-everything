@@ -8,5 +8,5 @@ export const jerusalem: NestedTimelineItem = {
   title: 'Fall of Jerusalem',
   content: 'Fall of Jerusalem',
   type: 'box',
-  group: significantEventsGroup
+  group: significantEventsGroup,
 }

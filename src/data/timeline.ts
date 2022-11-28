@@ -12,6 +12,6 @@ export const items: NestedTimelineItem[] = [
     title: 'Nebuchadnezzar',
     content: 'Nebuchadnezzar',
     // id: 'nebuchadnezzar',
-    group: foreignKingsGroup
-  }
+    group: foreignKingsGroup,
+  },
 ]

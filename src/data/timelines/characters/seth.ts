@@ -15,15 +15,15 @@ export const seth: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-3896),
-      content: 'Born<br><b>Genesis 5:3</b>'
+      content: 'Born<br><b>Genesis 5:3</b>',
     },
     {
       start: getDate(-3791),
-      content: 'Enosh is born at 105<br><b>Genesis 5:6</b>'
+      content: 'Enosh is born at 105<br><b>Genesis 5:6</b>',
     },
     {
       start: getDate(-2984),
-      content: 'Died at 912<br><b>Genesis 5:8</b>'
-    }
-  ]
+      content: 'Died at 912<br><b>Genesis 5:8</b>',
+    },
+  ],
 }

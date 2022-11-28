@@ -15,19 +15,19 @@ export const noah: NestedTimelineItem = {
   timeline: [
     {
       start: getDate(-2970),
-      content: 'Born<br><b>Genesis 5:28</b>'
+      content: 'Born<br><b>Genesis 5:28</b>',
     },
     {
       start: getDate(-2490),
-      content: 'God gives pronouncement of flood in 120 years<br><b>Genesis 6:3</b>'
+      content: 'God gives pronouncement of flood in 120 years<br><b>Genesis 6:3</b>',
     },
     {
-      start: getDate(-2370),
-      content: 'Flood begins<br><b>Genesis 7:11</b>'
+      start: getDate(-2370, 9),
+      content: 'Flood begins<br><b>Genesis 7:11</b>',
     },
     {
       start: getDate(-2020),
-      content: 'Died at 950<br><b>Genesis 9:29</b>'
-    }
-  ]
+      content: 'Died at 950<br><b>Genesis 9:29</b>',
+    },
+  ],
 }

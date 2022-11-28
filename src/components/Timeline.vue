@@ -26,7 +26,7 @@ export default defineComponent({
     subtitle: { type: String, default: '' },
     items: { type: Array as PropType<NestedTimelineItem[]>, required: true },
     start: { type: Date, default: null },
-    end: { type: Date, default: null }
+    end: { type: Date, default: null },
   },
 
   setup (props) {
@@ -64,9 +64,9 @@ export default defineComponent({
 
     return {
       timeline,
-      nestedTimeline
+      nestedTimeline,
     }
-  }
+  },
 })
 </script>
 

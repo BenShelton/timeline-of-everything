@@ -19,7 +19,7 @@ export default defineComponent({
   name: 'App',
 
   components: {
-    Timeline
+    Timeline,
   },
 
   setup () {
@@ -29,9 +29,9 @@ export default defineComponent({
     return {
       start,
       end,
-      items
+      items,
     }
-  }
+  },
 })
 </script>
 
