@@ -3,7 +3,9 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const enosh: NestedTimelineItem = {
-  className: 'incomplete',
+  displayOptions: {
+    complete: false,
+  },
   start: getDate(-3791),
   end: getDate(-2886),
   title: 'Enosh',

@@ -3,7 +3,9 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const williamTyndale: NestedTimelineItem = {
-  className: 'circa-start',
+  displayOptions: {
+    circaStart: true,
+  },
   start: getDate(1494),
   end: getDate(1536),
   title: 'William Tyndale',

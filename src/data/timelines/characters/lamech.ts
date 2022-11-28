@@ -3,7 +3,9 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const lamech: NestedTimelineItem = {
-  className: 'incomplete',
+  displayOptions: {
+    complete: false,
+  },
   start: getDate(-3152),
   end: getDate(-2375),
   title: 'Lamech',

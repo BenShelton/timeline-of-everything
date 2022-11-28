@@ -3,7 +3,10 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const shem: NestedTimelineItem = {
-  className: 'incomplete circa-end',
+  displayOptions: {
+    complete: false,
+    circaEnd: true,
+  },
   start: getDate(-2468),
   end: getDate(-1868),
   title: 'Shem',

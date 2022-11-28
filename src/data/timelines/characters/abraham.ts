@@ -3,7 +3,9 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const abraham: NestedTimelineItem = {
-  className: 'incomplete',
+  displayOptions: {
+    complete: false,
+  },
   start: getDate(-2018),
   end: getDate(-1843),
   title: 'Abraham',

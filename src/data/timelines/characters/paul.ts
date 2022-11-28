@@ -3,7 +3,10 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const paul: NestedTimelineItem = {
-  className: 'incomplete circa-start',
+  displayOptions: {
+    complete: false,
+    circaStart: true,
+  },
   start: getDate(1),
   // TODO: Death
   // end: getDate(99),

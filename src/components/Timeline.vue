@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, PropType, ref, watch } from 'vue'
+import { defineComponent, onMounted, PropType, ref, watch, computed } from 'vue'
 import { DataItem, Timeline, TimelineOptions } from 'vis-timeline/esnext'
 import { NestedTimelineItem } from '../data/types'
 
@@ -34,19 +34,36 @@ export default defineComponent({
     let timelineInstance: Timeline | null = null
     const nestedTimeline = ref<{ items: DataItem[], title: string, subtitle?: string } | null>(null)
 
+    const processedItems = computed(() => {
+      if (!props.items) return []
+      return props.items.map((item) => {
+        const classNames = []
+        if (item.displayOptions) {
+          if (item.displayOptions.complete !== true) classNames.push('incomplete')
+          if (item.displayOptions.circaStart === true) classNames.push('circa-start')
+          if (item.displayOptions.circaEnd === true) classNames.push('circa-end')
+        }
+        return {
+          ...item,
+          className: classNames.join(' ')
+        }
+      })
+    })
+
     function createTimeline (): void {
-      if (!props.items) return
+      const items = processedItems.value
+      if (!items) return
       if (!timeline.value) throw new Error('Timeline element not created')
       if (timelineInstance) timelineInstance.destroy()
       const options: TimelineOptions = {}
       if (props.start) options.start = props.start
       if (props.end) options.end = props.end
-      timelineInstance = new Timeline(timeline.value, props.items, options)
+      timelineInstance = new Timeline(timeline.value, items, options)
       timelineInstance.on('select', (selection) => {
         nestedTimeline.value = null
         const itemName: string = selection.items?.[0]
         if (itemName) {
-          const item = props.items.find(i => i.id === itemName)
+          const item = items.find(i => i.id === itemName)
           if (item?.timeline) {
             nestedTimeline.value = { items: item.timeline, title: item.content, subtitle: item.notes }
           }

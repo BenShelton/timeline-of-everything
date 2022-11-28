@@ -5,7 +5,10 @@ import { NestedTimelineItem } from '@/data/types'
 const birthDate = -1179
 
 export const samuel: NestedTimelineItem = {
-  className: 'incomplete circa-end',
+  displayOptions: {
+    complete: false,
+    circaEnd: true,
+  },
   start: getDate(birthDate),
   // TODO: Confirm death
   end: getDate(-1078),

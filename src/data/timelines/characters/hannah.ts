@@ -5,7 +5,10 @@ import { NestedTimelineItem } from '@/data/types'
 const goesToTemple = -1180
 
 export const hannah: NestedTimelineItem = {
-  className: 'circa-start circa-end',
+  displayOptions: {
+    circaStart: true,
+    circaEnd: true,
+  },
   start: getDate(-1210),
   end: getDate(-1130),
   title: 'Hannah',

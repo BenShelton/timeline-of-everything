@@ -3,7 +3,10 @@ import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const japheth: NestedTimelineItem = {
-  className: 'incomplete circa-end',
+  displayOptions: {
+    complete: false,
+    circaEnd: true,
+  },
   start: getDate(-2470),
   // TODO: End
   end: getDate(-2200),
