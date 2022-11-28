@@ -6,6 +6,7 @@ const goesToTemple = -1180
 
 export const hannah: NestedTimelineItem = {
   displayOptions: {
+    complete: true,
     circaStart: true,
     circaEnd: true,
   },

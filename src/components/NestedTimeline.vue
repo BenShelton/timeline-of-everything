@@ -5,7 +5,7 @@
     v-text="subtitle"
   />
   <div ref="timeline" />
-  <Timeline
+  <NestedTimeline
     v-if="nestedTimeline"
     :title="nestedTimeline.title"
     :subtitle="nestedTimeline.subtitle"
@@ -19,7 +19,7 @@ import { DataItem, Timeline, TimelineOptions } from 'vis-timeline/esnext'
 import { NestedTimelineItem } from '../data/types'
 
 export default defineComponent({
-  name: 'Timeline',
+  name: 'NestedTimeline',
 
   props: {
     title: { type: String, required: true },
@@ -45,7 +45,7 @@ export default defineComponent({
         }
         return {
           ...item,
-          className: classNames.join(' ')
+          className: classNames.join(' '),
         }
       })
     })

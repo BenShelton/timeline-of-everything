@@ -1,6 +1,6 @@
 <template>
   <h1>Timeline of Everything</h1>
-  <Timeline
+  <NestedTimeline
     title="Main"
     :items="items"
     :start="start"
@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Timeline from './components/Timeline.vue'
+import NestedTimeline from './components/NestedTimeline.vue'
 
 import { items } from './data/timeline'
 import { getDate } from './utils'
@@ -19,7 +19,7 @@ export default defineComponent({
   name: 'App',
 
   components: {
-    Timeline,
+    NestedTimeline,
   },
 
   setup () {

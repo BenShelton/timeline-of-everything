@@ -1,9 +1,22 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "vetur.experimental.templateInterpolationService": true,
   "eslint.validate": [
     "javascript",
     "typescript",
+    "html",
     "vue"
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[javascript][typescript][vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "volar.takeOverMode.enabled": "auto",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.insertFinalNewline": true
 }

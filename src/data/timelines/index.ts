@@ -3,7 +3,7 @@ import { NestedTimelineItem } from '@/data/types'
 function processFiles (files: Record<string, Record<string, NestedTimelineItem>>): NestedTimelineItem[] {
   return Object.entries(files).map(([k, v]) => {
     const name = k.split('/').pop()?.replace('.ts', '')
-    const item = v[name || '']
+    const item: NestedTimelineItem = v[name || '']
     if (!item) {
       console.warn(`Could not find item: ${k}`)
       return {} as NestedTimelineItem
