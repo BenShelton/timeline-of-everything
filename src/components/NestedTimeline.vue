@@ -1,5 +1,9 @@
 <template>
   <h2 v-text="title" />
+  <h3
+    v-if="info"
+    v-text="info"
+  />
   <h4
     v-if="subtitle"
     v-text="subtitle"
@@ -10,6 +14,7 @@
     :title="nestedTimeline.title"
     :subtitle="nestedTimeline.subtitle"
     :items="nestedTimeline.items"
+    :info="nestedTimeline.info"
   />
 </template>
 
@@ -24,6 +29,7 @@ export default defineComponent({
   props: {
     title: { type: String, required: true },
     subtitle: { type: String, default: '' },
+    info: { type: String, default: '' },
     items: { type: Array as PropType<NestedTimelineItem[]>, required: true },
     start: { type: Date, default: null },
     end: { type: Date, default: null },
@@ -32,7 +38,7 @@ export default defineComponent({
   setup (props) {
     const timeline = ref<HTMLDivElement | null>(null)
     let timelineInstance: Timeline | null = null
-    const nestedTimeline = ref<{ items: DataItem[], title: string, subtitle?: string } | null>(null)
+    const nestedTimeline = ref<{ items: DataItem[], title: string, subtitle?: string, info?: string } | null>(null)
 
     const processedItems = computed(() => {
       if (!props.items) return []
@@ -65,7 +71,17 @@ export default defineComponent({
         if (itemName) {
           const item = items.find(i => i.id === itemName)
           if (item?.timeline) {
-            nestedTimeline.value = { items: item.timeline, title: item.content, subtitle: item.notes }
+            const infoParts: string[] = []
+            if (item.start && item.end) {
+              const age = new Date(item.end).getFullYear() - new Date(item.start).getFullYear()
+              infoParts.push('Age: ' + age)
+            }
+            nestedTimeline.value = {
+              items: item.timeline,
+              title: item.content,
+              info: infoParts.join(' | '),
+              subtitle: item.notes,
+            }
           }
         }
       })
