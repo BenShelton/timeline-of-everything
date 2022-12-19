@@ -21,6 +21,10 @@ export const adam: NestedTimelineItem = {
       content: 'Created<br><b>Genesis 2:7</b>',
     },
     {
+      start: getDate(-3996),
+      content: 'Cain & Abel born about this time<br><b>Genesis 4:1, 2</b>',
+    },
+    {
       start: getDate(-3896),
       content: 'Seth is born at 130<br><b>Genesis 5:3</b>',
     },

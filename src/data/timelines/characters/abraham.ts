@@ -20,7 +20,7 @@ export const abraham: NestedTimelineItem = {
     },
     {
       start: getDate(-1943),
-      content: 'Crosses the Euphrates<br><b>Genesis 12:4</b>',
+      content: 'Crosses the Euphrates, enters Canaan<br><b>Genesis 12:4</b>',
     },
     {
       start: getDate(-1933),
@@ -40,7 +40,7 @@ export const abraham: NestedTimelineItem = {
     },
     {
       start: getDate(-1913),
-      content: 'Beginning of 400 year affliction<br><b>Acts 7:6</b>',
+      content: 'Beginning of 400 year affliction<br><b>Genesis 21:8-13</b>',
     },
     {
       start: getDate(-1881),

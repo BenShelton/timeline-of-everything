@@ -19,6 +19,10 @@ export const ishmael: NestedTimelineItem = {
       content: 'Born<br><b>Genesis 16:15,16</b>',
     },
     {
+      start: getDate(-1913),
+      content: 'Taunts Isaac, starting 400 year affliction<br><b>Genesis 21:8-13</b>',
+    },
+    {
       start: getDate(-1795),
       content: 'Dies at 137<br><b>Genesis 25:17</b>',
     },
