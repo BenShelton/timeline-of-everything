@@ -14,3 +14,8 @@ export const significantEventsGroup: DataGroup = {
   id: 'significantEvents',
   content: 'Significant Events',
 }
+
+export const worldPowersGroup: DataGroup = {
+  id: 'worldPowers',
+  content: 'World Powers',
+}
