@@ -9,7 +9,7 @@ export const sarah: NestedTimelineItem = {
   start: getDate(-2008),
   end: getDate(-1881),
   title: 'Sarah',
-  content: 'Sarah',
+  content: 'Sarah (Sarai)',
   id: 'sarah',
   group: charactersGroup,
   // TODO: Remaining timeline
@@ -17,6 +17,14 @@ export const sarah: NestedTimelineItem = {
     {
       start: getDate(-2008),
       content: 'Born<br><b>Genesis 23:1</b>',
+    },
+    {
+      start: getDate(-1933),
+      content: 'Gives Hagar to Abraham to bear a son<br><b>Genesis 16:3</b>',
+    },
+    {
+      start: getDate(-1919),
+      content: 'Name is changed from Sarai<br><b>Genesis 17:15</b>',
     },
     {
       start: getDate(-1918),

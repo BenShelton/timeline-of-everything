@@ -9,7 +9,7 @@ export const abraham: NestedTimelineItem = {
   start: getDate(-2018),
   end: getDate(-1843),
   title: 'Abraham',
-  content: 'Abraham',
+  content: 'Abraham (Abram)',
   id: 'abraham',
   group: charactersGroup,
   // TODO: Remaining timeline
@@ -20,7 +20,7 @@ export const abraham: NestedTimelineItem = {
     },
     {
       start: getDate(-1943),
-      content: 'Crosses the Euphrates, enters Canaan<br><b>Genesis 12:4</b>',
+      content: 'Crosses the Euphrates on Nisan 14<br>Abrahamic covenant takes effect<br>430 year period begins<br>Enters Canaan<br><b>Genesis 12:4</b>',
     },
     {
       start: getDate(-1933),
@@ -28,11 +28,11 @@ export const abraham: NestedTimelineItem = {
     },
     {
       start: getDate(-1932),
-      content: 'Becomes father to Ishmael<br><b>Genesis 16:15,16</b>',
+      content: 'Becomes father to Ishmael through Hagar<br><b>Genesis 16:15,16</b>',
     },
     {
       start: getDate(-1919),
-      content: 'Covenant of circumcision is made<br><b>Genesis 17:1,10,24</b>',
+      content: 'Name is changed from Abram<br>Hosts 3 angels<br>Covenant of circumcision is made<br>Prays for Lot to be saved<br><b>Genesis 17:15</b>',
     },
     {
       start: getDate(-1918),

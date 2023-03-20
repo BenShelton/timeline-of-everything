@@ -4,7 +4,7 @@ import { NestedTimelineItem } from '@/data/types'
 
 export const fourHundredYearAffliction: NestedTimelineItem = {
   start: getDate(-1913),
-  end: getDate(-1513),
+  end: getDate(-1513, 3),
   title: '400 Year Affliction',
   content: '400 Year Affliction',
   group: significantEventsGroup,
@@ -15,8 +15,8 @@ export const fourHundredYearAffliction: NestedTimelineItem = {
       content: 'Starts with Ishmael taunting Isaac<br><b>Genesis 21:8-13</b>',
     },
     {
-      start: getDate(-1513),
-      content: 'Ends with the Exodus from Egypt',
+      start: getDate(-1513, 3),
+      content: 'Ends with the Exodus from Egypt on Nisan 14',
     },
   ],
 }

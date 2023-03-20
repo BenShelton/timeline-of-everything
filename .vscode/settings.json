@@ -18,5 +18,8 @@
   },
   "volar.takeOverMode.enabled": "auto",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "cSpell.words": [
+    "arpachshad"
+  ]
 }
