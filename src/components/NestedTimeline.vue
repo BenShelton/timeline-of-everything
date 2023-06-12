@@ -22,6 +22,7 @@
 import { defineComponent, onMounted, PropType, ref, watch, computed } from 'vue'
 import { DataItem, Timeline, TimelineOptions } from 'vis-timeline/esnext'
 import { NestedTimelineItem } from '../data/types'
+import { prettyDate } from '@/utils'
 
 export default defineComponent({
   name: 'NestedTimeline',
@@ -76,8 +77,20 @@ export default defineComponent({
               const age = new Date(item.end).getFullYear() - new Date(item.start).getFullYear()
               infoParts.push('Age: ' + age)
             }
+            const prettyTimeline = item.timeline.map(t => {
+              let content = t.content
+              if (t.start) {
+                content += '<br><i>[' + prettyDate(t.start)
+                if (t.end) content += ' - ' + prettyDate(t.end)
+                content += ']</i>'
+              }
+              return {
+                ...t,
+                content,
+              }
+            })
             nestedTimeline.value = {
-              items: item.timeline,
+              items: prettyTimeline,
               title: item.content,
               info: infoParts.join(' | '),
               subtitle: item.notes,
