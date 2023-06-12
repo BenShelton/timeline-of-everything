@@ -25,8 +25,8 @@ export const fourHundredThirtyYearPeriod: NestedTimelineItem = {
       content: 'Second half spent in Egypt',
     },
     {
-      start: getDate(-1513),
-      content: 'Ends with the Exodus from Egypt on Nisan 14<br><b>Exodus 12:40,41</b>',
+      start: getDate(-1513, 3),
+      content: 'Ends with the Exodus from Egypt on Nisan 14<br><b>Exodus 12:40,41</b><br><b>Galatians 3:17</b>',
     },
   ],
 }

@@ -16,7 +16,7 @@ export const fourHundredYearAffliction: NestedTimelineItem = {
     },
     {
       start: getDate(-1513, 3),
-      content: 'Ends with the Exodus from Egypt on Nisan 14',
+      content: 'Ends with the Exodus from Egypt on Nisan 14<br><b>Exodus 12:40,41</b>',
     },
   ],
 }
