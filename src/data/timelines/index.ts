@@ -18,5 +18,8 @@ export const characters = processFiles(characterFiles)
 const eventFiles = import.meta.glob('./events/*.ts', { eager: true }) as Record<string, Record<string, NestedTimelineItem>>
 export const events = processFiles(eventFiles)
 
+const foreignKingFiles = import.meta.glob('./foreignKings/*.ts', { eager: true }) as Record<string, Record<string, NestedTimelineItem>>
+export const foreignKings = processFiles(foreignKingFiles)
+
 const worldPowerFiles = import.meta.glob('./worldPowers/*.ts', { eager: true }) as Record<string, Record<string, NestedTimelineItem>>
 export const worldPowers = processFiles(worldPowerFiles)

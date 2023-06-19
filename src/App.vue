@@ -3,6 +3,7 @@
   <NestedTimeline
     title="Main"
     :items="items"
+    :groups="groups"
     :start="start"
     :end="end"
   />
@@ -13,6 +14,7 @@ import { defineComponent } from 'vue'
 import NestedTimeline from './components/NestedTimeline.vue'
 
 import { items } from './data/timeline'
+import { groups } from './data/groups'
 import { getDate } from './utils'
 
 export default defineComponent({
@@ -30,6 +32,7 @@ export default defineComponent({
       start,
       end,
       items,
+      groups,
     }
   },
 })

@@ -1,21 +1,28 @@
-import { DataGroup } from 'vis-timeline/esnext'
+import { TimelineGroup } from 'vis-timeline/esnext'
 
-export const charactersGroup: DataGroup = {
+export const charactersGroup: TimelineGroup = {
   id: 'characters',
   content: 'Characters',
 }
 
-export const foreignKingsGroup: DataGroup = {
+export const foreignKingsGroup: TimelineGroup = {
   id: 'foreignKings',
   content: 'Foreign Kings',
 }
 
-export const significantEventsGroup: DataGroup = {
+export const significantEventsGroup: TimelineGroup = {
   id: 'significantEvents',
   content: 'Significant Events',
 }
 
-export const worldPowersGroup: DataGroup = {
+export const worldPowersGroup: TimelineGroup = {
   id: 'worldPowers',
   content: 'World Powers',
 }
+
+export const groups = [
+  worldPowersGroup,
+  foreignKingsGroup,
+  significantEventsGroup,
+  charactersGroup,
+]

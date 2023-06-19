@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, PropType, ref, watch, computed } from 'vue'
-import { DataItem, Timeline, TimelineOptions } from 'vis-timeline/esnext'
+import { DataItem, Timeline, TimelineGroup, TimelineOptions } from 'vis-timeline/esnext'
 import { NestedTimelineItem } from '../data/types'
 import { prettyDate } from '@/utils'
 
@@ -32,6 +32,7 @@ export default defineComponent({
     subtitle: { type: String, default: '' },
     info: { type: String, default: '' },
     items: { type: Array as PropType<NestedTimelineItem[]>, required: true },
+    groups: { type: Array as PropType<TimelineGroup[]>, default: () => [] },
     start: { type: Date, default: null },
     end: { type: Date, default: null },
   },
@@ -52,6 +53,7 @@ export default defineComponent({
         }
         return {
           ...item,
+          group: item.group?.id,
           className: classNames.join(' '),
         }
       })
@@ -66,6 +68,7 @@ export default defineComponent({
       if (props.start) options.start = props.start
       if (props.end) options.end = props.end
       timelineInstance = new Timeline(timeline.value, items, options)
+      if (props.groups.length) timelineInstance.setGroups(props.groups)
       timelineInstance.on('select', (selection) => {
         nestedTimeline.value = null
         const itemName: string = selection.items?.[0]

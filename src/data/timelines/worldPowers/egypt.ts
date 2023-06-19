@@ -6,17 +6,22 @@ export const egypt: NestedTimelineItem = {
   displayOptions: {
     complete: false,
     circaStart: true,
+    circaEnd: true,
   },
   start: getDate(-1600),
-  // end: getDate(-539, 10, 5),
+  end: getDate(-700),
   title: 'Egypt',
   content: 'Egypt',
-  type: 'box',
+  id: 'egypt',
   group: worldPowersGroup,
   timeline: [
     {
       start: getDate(-1600),
       content: 'Reign is mentioned<br><b>Exodus 1:8</b>',
+    },
+    {
+      start: getDate(-700),
+      content: 'Overthrown by Esar-Haddon around this time',
     },
   ],
 }
