@@ -12,6 +12,9 @@ function processFiles (files: Record<string, Record<string, NestedTimelineItem>>
   })
 }
 
+const bookFiles = import.meta.glob('./books/*.ts', { eager: true }) as Record<string, Record<string, NestedTimelineItem>>
+export const books = processFiles(bookFiles)
+
 const characterFiles = import.meta.glob('./characters/*.ts', { eager: true }) as Record<string, Record<string, NestedTimelineItem>>
 export const characters = processFiles(characterFiles)
 

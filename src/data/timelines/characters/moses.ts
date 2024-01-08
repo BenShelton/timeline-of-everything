@@ -48,7 +48,7 @@ export const moses: NestedTimelineItem = {
     },
     {
       start: getDate(-1473),
-      content: 'Completes writing Numbers, Deuteronomy & Job',
+      content: 'Completes writing Numbers, Deuteronomy, Job & Psalm 90 (possibly 91)',
     },
     {
       start: getDate(-1473),

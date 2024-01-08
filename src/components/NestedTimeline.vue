@@ -6,6 +6,7 @@
   />
   <h4
     v-if="subtitle"
+    class="timeline-subtitle"
     v-text="subtitle"
   />
   <div ref="timeline" />
@@ -128,4 +129,6 @@ export default defineComponent({
   .incomplete:not(.vis-selected)
     background-color: rgba(red, 0.3)
     border-color: rgba(red, 0.7)
+.timeline-subtitle
+  white-space: pre-wrap
 </style>

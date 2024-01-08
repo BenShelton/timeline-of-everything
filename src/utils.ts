@@ -1,3 +1,5 @@
+import { booksGroup } from '@/data/groups'
+import { NestedTimelineItem } from '@/data/types'
 import { DateType } from 'vis-timeline'
 
 export function getDate (year: number, month = 1, day = 1): Date {
@@ -21,4 +23,28 @@ export function prettyDate (date: DateType): string {
   if (m !== '01') output += m + '-'
   output += parsedDate.getFullYear() < 0 ? String(Number(y)) : y
   return output
+}
+
+interface BookDetails {
+  book: string
+  completed: Date
+  written?: string
+  covered?: string
+}
+export function bookTimelineItem (details: BookDetails): NestedTimelineItem {
+  const notes: string[] = []
+  if (details.written) notes.push(`Place Written: ${details.written}`)
+  if (details.covered) notes.push(`Time Covered: ${details.covered}`)
+  return {
+    displayOptions: {
+      complete: true,
+    },
+    start: details.completed,
+    title: details.book,
+    content: details.book,
+    id: details.book.toLowerCase(),
+    group: booksGroup,
+    notes: notes.join('\n'),
+    timeline: [],
+  }
 }

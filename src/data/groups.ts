@@ -20,9 +20,15 @@ export const worldPowersGroup: TimelineGroup = {
   content: 'World Powers',
 }
 
+export const booksGroup: TimelineGroup = {
+  id: 'books',
+  content: 'Bible Books',
+}
+
 export const groups = [
   worldPowersGroup,
   foreignKingsGroup,
   significantEventsGroup,
   charactersGroup,
+  booksGroup,
 ]
