@@ -29,11 +29,13 @@ interface BookDetails {
   book: string
   completed: Date
   written?: string
+  writer?: string
   covered?: string
 }
 export function bookTimelineItem (details: BookDetails): NestedTimelineItem {
   const notes: string[] = []
   if (details.written) notes.push(`Place Written: ${details.written}`)
+  if (details.writer) notes.push(`Writer: ${details.writer}`)
   if (details.covered) notes.push(`Time Covered: ${details.covered}`)
   return {
     displayOptions: {
@@ -42,7 +44,7 @@ export function bookTimelineItem (details: BookDetails): NestedTimelineItem {
     start: details.completed,
     title: details.book,
     content: details.book,
-    id: details.book.toLowerCase(),
+    id: 'book-' + details.book.toLowerCase(),
     group: booksGroup,
     notes: notes.join('\n'),
     timeline: [],

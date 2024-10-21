@@ -4,5 +4,6 @@ export const numbers = bookTimelineItem({
   book: 'Numbers',
   completed: getDate(-1473),
   written: 'Wilderness and Plains of Moab',
+  writer: 'Moses',
   covered: '1512 to 1473 BCE',
 })

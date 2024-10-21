@@ -7,7 +7,7 @@ export const moses: NestedTimelineItem = {
     complete: false,
   },
   start: getDate(-1593),
-  end: getDate(-1473),
+  end: getDate(-1473, 3),
   title: 'Moses',
   content: 'Moses',
   id: 'moses',
@@ -51,8 +51,8 @@ export const moses: NestedTimelineItem = {
       content: 'Completes writing Numbers, Deuteronomy, Job & Psalm 90 (possibly 91)',
     },
     {
-      start: getDate(-1473),
-      content: 'Died<br><b>Deuteronomy 34:5</b>',
+      start: getDate(-1473, 3),
+      content: 'Dies in land of Moab, buried by Jehovah<br><b>Deuteronomy 34:5,6</b>',
     },
   ],
 }

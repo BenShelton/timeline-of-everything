@@ -7,7 +7,7 @@ export const aaron: NestedTimelineItem = {
     complete: false,
   },
   start: getDate(-1597),
-  end: getDate(-1474),
+  end: getDate(-1474, 8),
   title: 'Aaron',
   content: 'Aaron',
   id: 'aaron',
@@ -19,8 +19,8 @@ export const aaron: NestedTimelineItem = {
       content: 'Born<br><b>Exodus 6:20</b>',
     },
     {
-      start: getDate(-1474),
-      content: 'Died<br><b>Numbers 33:39</b>',
+      start: getDate(-1474, 8),
+      content: 'Died on Mount Hor<br><b>Numbers 33:39</b>',
     },
   ],
 }
