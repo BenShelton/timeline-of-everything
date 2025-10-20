@@ -54,6 +54,7 @@ export default defineComponent({
         }
         return {
           ...item,
+          content: item.title || item.content,
           group: item.group?.id,
           className: classNames.join(' '),
         }
@@ -74,7 +75,7 @@ export default defineComponent({
         nestedTimeline.value = null
         const itemName: string = selection.items?.[0]
         if (itemName) {
-          const item = items.find(i => i.id === itemName)
+          const item = props.items.find(i => i.id === itemName)
           if (item?.timeline) {
             const infoParts: string[] = []
             if (item.start && item.end) {
