@@ -7,7 +7,7 @@ export const jacob: NestedTimelineItem = {
     complete: false,
   },
   start: getDate(-1858),
-  end: getDate(-1712),
+  end: getDate(-1711),
   title: 'Jacob',
   content: 'Jacob',
   id: 'jacob',
@@ -53,7 +53,7 @@ export const jacob: NestedTimelineItem = {
       content: 'Family enters Egypt<br><b>Genesis 45:6,46:26,47:9</b>',
     },
     {
-      start: getDate(-1712),
+      start: getDate(-1711),
       content: 'Dies at 146 (in his 147th year)<br><b>Genesis 48:28</b>',
     },
   ],

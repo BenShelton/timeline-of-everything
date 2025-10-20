@@ -6,7 +6,7 @@ export const flood: NestedTimelineItem = {
   start: getDate(-2370, 11),
   end: getDate(-2369, 11),
   title: 'Flood',
-  content: 'Flood',
+  content: 'Flood (Global Deluge)',
   type: 'box',
   group: significantEventsGroup,
   timeline: [

@@ -7,13 +7,17 @@ export const assyria: NestedTimelineItem = {
     circaStart: true,
     complete: false,
   },
-  start: getDate(-700),
+  start: getDate(-874),
   end: getDate(-625),
   title: 'Assyria',
   content: 'Assyria',
   id: 'assyria',
   group: worldPowersGroup,
   timeline: [
+    {
+      start: getDate(-874),
+      content: 'Becomes world power',
+    },
     {
       start: getDate(-700),
       content: 'Esar-Haddon overthrows Egypt around this time',

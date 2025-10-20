@@ -16,12 +16,15 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "volar.takeOverMode.enabled": "auto",
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.insertFinalNewline": true,
   "cSpell.words": [
     "amorite",
     "arpachshad",
-    "kadesh"
+    "jehoiada",
+    "kadesh",
+    "mephibosheth",
+    "methusaleh",
+    "rahab"
   ]
 }

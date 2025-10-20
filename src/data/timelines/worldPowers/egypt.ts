@@ -20,6 +20,10 @@ export const egypt: NestedTimelineItem = {
       content: 'Reign is mentioned<br><b>Exodus 1:8</b>',
     },
     {
+      start: getDate(-874),
+      content: 'Overtaken as world power by Assyria',
+    },
+    {
       start: getDate(-700),
       content: 'Overthrown by Esar-Haddon around this time',
     },

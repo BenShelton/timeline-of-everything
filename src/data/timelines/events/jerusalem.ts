@@ -9,4 +9,10 @@ export const jerusalem: NestedTimelineItem = {
   content: 'Fall of Jerusalem',
   type: 'box',
   group: significantEventsGroup,
+  timeline: [
+    {
+      start: getDate(-607),
+      content: 'Nebuchadnezzar captures Jerusalem',
+    },
+  ],
 }
