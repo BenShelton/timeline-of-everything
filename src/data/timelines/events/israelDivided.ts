@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const israelDivided: NestedTimelineItem = {
+  id: 'israelDivided',
   start: getDate(-997),
   end: getDate(-997),
   title: 'Israel Divided Into Two Kingdoms',

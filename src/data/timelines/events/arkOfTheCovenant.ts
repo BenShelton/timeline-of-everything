@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const arkOfTheCovenant: NestedTimelineItem = {
+  id: 'arkOfTheCovenant',
   displayOptions: {
     complete: true,
     circaEnd: true,

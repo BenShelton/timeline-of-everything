@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const tabernacle: NestedTimelineItem = {
+  id: 'tabernacle',
   displayOptions: {
     complete: false,
   },

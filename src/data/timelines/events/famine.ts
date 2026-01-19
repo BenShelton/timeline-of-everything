@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const famine: NestedTimelineItem = {
+  id: 'famine',
   start: getDate(-1730),
   end: getDate(-1723),
   title: 'Famine in Egypt',

@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const releasedFromBabylon: NestedTimelineItem = {
+  id: 'releasedFromBabylon',
   start: getDate(-537),
   end: getDate(-537),
   title: 'Jews Released from Babylon',

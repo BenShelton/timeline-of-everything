@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const assyriaDefeatsKingdom: NestedTimelineItem = {
+  id: 'assyriaDefeatsKingdom',
   start: getDate(-740),
   end: getDate(-740),
   title: 'Assyria Defeats Ten Tribe Kingdom',

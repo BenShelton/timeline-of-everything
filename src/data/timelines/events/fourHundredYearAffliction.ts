@@ -3,6 +3,7 @@ import { significantEventsGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
 export const fourHundredYearAffliction: NestedTimelineItem = {
+  id: 'fourHundredYearAffliction',
   start: getDate(-1913),
   end: getDate(-1513, 3),
   title: '400 Year Affliction',
