@@ -7,7 +7,7 @@ export const stephen: NestedTimelineItem = {
     circaStart: true,
   },
   start: getDate(3, 6),
-  end: getDate(34, 12),
+  end: getDate(33, 12),
   title: 'Stephen',
   content: 'Stephen',
   id: 'stephen',
@@ -15,12 +15,16 @@ export const stephen: NestedTimelineItem = {
   notes: 'Estimated to be 30 at first mention',
   timeline: [
     {
+      start: getDate(3, 6),
+      content: 'Estimated birth date',
+    },
+    {
       start: getDate(33, 6),
       content: 'Assigned to distribute food<br>' +
         '<b>Acts 6:1-7</b>',
     },
     {
-      start: getDate(34, 12),
+      start: getDate(33, 12),
       content: 'Accused of blasphemy & brought before Sanhedrin<br>' +
         'Received a vision of Jehovah & Jesus<br>' +
         'Stoned to death<br>' +

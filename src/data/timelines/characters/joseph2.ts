@@ -22,7 +22,7 @@ export const joseph2: NestedTimelineItem = {
       content: 'Estimated birth date',
     },
     {
-      start: getDate(-2),
+      start: getDate(-2, 10),
       content: 'Mary gives birth to Jesus<br><b>Luke 1:7</b>',
     },
     {

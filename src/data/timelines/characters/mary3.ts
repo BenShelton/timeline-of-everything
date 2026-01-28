@@ -2,31 +2,27 @@ import { getDate } from '@/utils'
 import { charactersGroup } from '@/data/groups'
 import { NestedTimelineItem } from '@/data/types'
 
-export const mary: NestedTimelineItem = {
+export const mary3: NestedTimelineItem = {
   displayOptions: {
     complete: false,
     circaStart: true,
     circaEnd: true,
   },
-  start: getDate(-22),
-  end: getDate(79),
-  title: 'Mary',
-  content: 'Mary',
-  id: 'mary',
+  start: getDate(-15),
+  end: getDate(85),
+  title: 'Mary (Lazarus\' Sister)',
+  content: 'Mary (Lazarus\' Sister)',
+  id: 'maryLazarusSister',
   group: charactersGroup,
-  notes: 'Estimated to be 20 when she gave birth to Jesus',
+  notes: 'Estimated to be around 45 when with Jesus',
   // TODO: Remaining timeline
   timeline: [
     {
-      start: getDate(-22),
+      start: getDate(-15),
       content: 'Estimated birth date',
     },
     {
-      start: getDate(-2, 10),
-      content: 'Gives birth to Jesus<br><b>Luke 1:7</b>',
-    },
-    {
-      start: getDate(79),
+      start: getDate(85),
       content: 'Estimated death date at 100',
     },
   ],

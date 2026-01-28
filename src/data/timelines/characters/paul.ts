@@ -8,24 +8,28 @@ export const paul: NestedTimelineItem = {
     circaStart: true,
     circaEnd: false,
   },
-  start: getDate(1),
+  start: getDate(3),
   end: getDate(66),
   title: 'Paul',
   content: 'Paul',
   id: 'paul',
   group: charactersGroup,
-  notes: 'Estimated to be 33 at first mention',
+  notes: 'Estimated to be 30 at first mention',
   // TODO: Remaining timeline
   timeline: [
     {
-      start: getDate(1),
+      start: getDate(3),
       content: 'Estimated birth date',
     },
     {
-      start: getDate(34),
+      start: getDate(33, 12),
       content: 'Watches Stephen being stoned<br>' +
         '<b>Acts 7:58</b><br>' +
         link('https://wol.jw.org/en/wol/d/r1/lp-e/1102009041#h=42'),
+    },
+    {
+      start: getDate(34),
+      content: 'Converted',
     },
     {
       start: getDate(66),
